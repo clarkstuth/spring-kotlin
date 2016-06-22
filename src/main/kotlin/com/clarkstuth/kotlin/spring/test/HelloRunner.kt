@@ -18,6 +18,9 @@ open class HelloRunner @Autowired constructor(val helloService: HelloService) : 
 
     override fun run(vararg args: String?) {
         helloService.execute()
+
+        Thread.sleep(30000);
+
         SpringApplication.exit(applicationContext)
     }
 }
